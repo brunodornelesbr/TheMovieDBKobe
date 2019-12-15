@@ -15,6 +15,7 @@
 		9A2020DD23A5C9E900037A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2020DB23A5C9E900037A09 /* LaunchScreen.storyboard */; };
 		9A2020E823A5C9E900037A09 /* TheMovieDBKobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2020E723A5C9E900037A09 /* TheMovieDBKobeTests.swift */; };
 		9A2020F323A5C9E900037A09 /* TheMovieDBKobeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2020F223A5C9E900037A09 /* TheMovieDBKobeUITests.swift */; };
+		9A20210523A5CBDD00037A09 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A20210423A5CBDD00037A09 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9A2020EE23A5C9E900037A09 /* TheMovieDBKobeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBKobeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2020F223A5C9E900037A09 /* TheMovieDBKobeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBKobeUITests.swift; sourceTree = "<group>"; };
 		9A2020F423A5C9E900037A09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A20210423A5CBDD00037A09 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,12 @@
 		9A2020CF23A5C9E800037A09 /* TheMovieDBKobe */ = {
 			isa = PBXGroup;
 			children = (
-				9A2020D023A5C9E800037A09 /* AppDelegate.swift */,
-				9A2020D223A5C9E800037A09 /* SceneDelegate.swift */,
-				9A2020D423A5C9E800037A09 /* ViewController.swift */,
-				9A2020D623A5C9E800037A09 /* Main.storyboard */,
-				9A2020D923A5C9E900037A09 /* Assets.xcassets */,
-				9A2020DB23A5C9E900037A09 /* LaunchScreen.storyboard */,
+				9A20210323A5CB7100037A09 /* Router */,
 				9A2020DE23A5C9E900037A09 /* Info.plist */,
+				9A20210123A5CAF100037A09 /* ViewControllers */,
+				9A20210023A5CAC400037A09 /* AppFiles */,
+				9A20210223A5CAF800037A09 /* Storyboards */,
+				9A2020D923A5C9E900037A09 /* Assets.xcassets */,
 			);
 			path = TheMovieDBKobe;
 			sourceTree = "<group>";
@@ -126,6 +127,40 @@
 				9A2020F423A5C9E900037A09 /* Info.plist */,
 			);
 			path = TheMovieDBKobeUITests;
+			sourceTree = "<group>";
+		};
+		9A20210023A5CAC400037A09 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9A2020D023A5C9E800037A09 /* AppDelegate.swift */,
+				9A2020D223A5C9E800037A09 /* SceneDelegate.swift */,
+			);
+			path = AppFiles;
+			sourceTree = "<group>";
+		};
+		9A20210123A5CAF100037A09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A2020D423A5C9E800037A09 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9A20210223A5CAF800037A09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9A2020D623A5C9E800037A09 /* Main.storyboard */,
+				9A2020DB23A5C9E900037A09 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9A20210323A5CB7100037A09 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9A20210423A5CBDD00037A09 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A20210523A5CBDD00037A09 /* Router.swift in Sources */,
 				9A2020D523A5C9E800037A09 /* ViewController.swift in Sources */,
 				9A2020D123A5C9E800037A09 /* AppDelegate.swift in Sources */,
 				9A2020D323A5C9E800037A09 /* SceneDelegate.swift in Sources */,
