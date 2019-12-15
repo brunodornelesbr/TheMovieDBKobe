@@ -6,7 +6,8 @@ target 'TheMovieDBKobe' do
   use_frameworks!
 
   # Pods for TheMovieDBKobe
-
+ pod 'RxSwift'
+ pod 'RxCocoa'
   target 'TheMovieDBKobeTests' do
     inherit! :search_paths
     # Pods for testing

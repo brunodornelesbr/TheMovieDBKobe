@@ -11,5 +11,9 @@ import UIKit
 class UpcomingMoviesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var posterLabel: UILabel!
-    
+    static var reuseId = "upcomingMoviesCell"
+    static var nibName = "UpcomingMoviesCollectionViewCell"
+    func bindTo(movie : Movie){
+           
+       }
 }
