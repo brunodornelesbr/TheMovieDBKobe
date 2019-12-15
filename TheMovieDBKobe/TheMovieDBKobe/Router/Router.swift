@@ -14,14 +14,22 @@ class Router {
         navigationController = UINavigationController()
         routeToUpcomingMovies()
     }
-    
-    func routeToUpcomingMovies(){
-        
-        
+    //MARK:- Routing methods
+    func routeToUpcomingMovies() {
+        let upcomingMovie = instantiateInitialVCFromStoryboard(storyboardName: "UpcomingMovies")
+        addViewControllerToNavigation(vc: upcomingMovie)
     }
     
-    func addViewControllerToNavigation(vc : UIViewController){
+    //MARK:- Helper methods
+    func addViewControllerToNavigation(vc : UIViewController) {
         navigationController.addChild(vc)
     }
     
+    func instantiateInitialVCFromStoryboard(storyboardName : String) -> UIViewController {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()
+        guard let existingVc = vc else {fatalError("Initial view controller not set in storyboard \(storyboardName)")
+        }
+        return existingVc
+    }
 }
