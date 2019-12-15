@@ -9,5 +9,19 @@
 import UIKit
 
 class Router {
-
+    var navigationController : UINavigationController
+    init(){
+        navigationController = UINavigationController()
+        routeToUpcomingMovies()
+    }
+    
+    func routeToUpcomingMovies(){
+        
+        
+    }
+    
+    func addViewControllerToNavigation(vc : UIViewController){
+        navigationController.addChild(vc)
+    }
+    
 }
