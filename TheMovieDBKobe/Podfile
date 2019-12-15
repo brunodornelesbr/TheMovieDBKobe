@@ -8,6 +8,8 @@ target 'TheMovieDBKobe' do
   # Pods for TheMovieDBKobe
  pod 'RxSwift'
  pod 'RxCocoa'
+ pod 'Alamofire'
+ pod 'AlamofireImage'
   target 'TheMovieDBKobeTests' do
     inherit! :search_paths
     # Pods for testing
