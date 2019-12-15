@@ -17,7 +17,7 @@ class Router {
     //MARK:- Routing methods
     func routeToUpcomingMovies() {
         let upcomingMovie = instantiateInitialVCFromStoryboard(storyboardName: "UpcomingMovies") as! UpcomingMoviesViewController
-        upcomingMovie.model = UpcomingMovieViewModel()
+        upcomingMovie.model = UpcomingMovieViewModel(request: Request())
         addViewControllerToNavigation(vc: upcomingMovie)
     }
     

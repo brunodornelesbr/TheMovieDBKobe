@@ -16,3 +16,7 @@ static let imageUrl = "https://image.tmdb.org/t/p/w500/%@"
 static let genreList = "\(baseUrl)/genre/movie/list"
 static let searchMovie = "\(baseUrl)/search/movie"
 }
+
+struct ImageConstants{
+    static let placeholderImage = #imageLiteral(resourceName: "no-image")
+}

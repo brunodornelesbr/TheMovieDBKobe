@@ -18,6 +18,7 @@ class UpcomingMoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rxSetup()
+        model.getUpcomingMovies()
     }
     
     func rxSetup() {
@@ -32,6 +33,16 @@ class UpcomingMoviesViewController: UIViewController {
         
         upcomingMoviesCollectionView.register(UINib(nibName: UpcomingMoviesCollectionViewCell.nibName, bundle: nil), forCellWithReuseIdentifier: UpcomingMoviesCollectionViewCell.reuseId)
         upcomingMoviesCollectionView.rx.setDelegate(self).disposed(by: bag)
+        upcomingMoviesCollectionView.rx.contentOffset.map{
+            offset in
+            return self.upcomingMoviesCollectionView.isNearBottomEdge(edgeOffset: 30)
+        }.filter{
+            return $0
+        }.throttle(1, latest: false, scheduler: MainScheduler.instance)
+        .subscribe({[weak self] _ in
+            self?.model.getUpcomingMovies()
+        }).disposed(by: bag)
+        
         model.movies.bind(to: upcomingMoviesCollectionView.rx.items(cellIdentifier: UpcomingMoviesCollectionViewCell.reuseId,cellType: UpcomingMoviesCollectionViewCell.self)){
             index,model,cell in
             cell.bindTo(movie: model)
@@ -42,7 +53,6 @@ class UpcomingMoviesViewController: UIViewController {
 
 extension UpcomingMoviesViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-   
         let numberOfItemsPerRow: CGFloat = 2
         let spacingBetweenCells: CGFloat = spacing
         let totalSpacing = (2 * spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)

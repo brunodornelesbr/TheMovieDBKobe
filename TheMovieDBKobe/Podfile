@@ -10,6 +10,7 @@ target 'TheMovieDBKobe' do
  pod 'RxCocoa'
  pod 'Alamofire'
  pod 'AlamofireImage'
+ pod 'AlamofireObjectMapper'
   target 'TheMovieDBKobeTests' do
     inherit! :search_paths
     # Pods for testing
