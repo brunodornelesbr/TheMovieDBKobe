@@ -32,7 +32,7 @@ class Movie: Mappable {
         genreIds <- map["genre_ids"]
       
         for id in genreIds {
-            genres.append(contentsOf:"\n\(Genres.getGenre(id: id))")
+            genres.append(contentsOf:" \(Genres.getGenre(id: id))")
         }
         var release = ""
         release<-map["release_date"]
@@ -45,5 +45,12 @@ class Movie: Mappable {
         
         return URL(string: urlString)
     }
+    
+    func getBackdropURL()->URL?{
+          guard let path = backdropPath else {return nil}
+          let urlString = String(format:APIConstants.imageUrl,path)
+          
+          return URL(string: urlString)
+      }
     
 }
