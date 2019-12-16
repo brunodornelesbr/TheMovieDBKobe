@@ -23,6 +23,7 @@ class DetailsMovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureRx()
+        self.navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func configureRx(){
