@@ -10,6 +10,7 @@ import UIKit
 
 class Router {
     var navigationController : UINavigationController
+    var request = Request()
     init(){
         navigationController = UINavigationController()
         routeToUpcomingMovies()
@@ -17,13 +18,17 @@ class Router {
     //MARK:- Routing methods
     func routeToUpcomingMovies() {
         let upcomingMovie = instantiateInitialVCFromStoryboard(storyboardName: "UpcomingMovies") as! UpcomingMoviesViewController
-        upcomingMovie.model = UpcomingMovieViewModel(request: Request())
+        upcomingMovie.model = UpcomingMovieViewModel(request: request, router: self)
         addViewControllerToNavigation(vc: upcomingMovie)
     }
+    func routeToDetailsMovie(movie : Movie) {
+//           let detailsMovie = instantiateInitialVCFromStoryboard(storyboardName: "DetailsMovie")
+//           addViewControllerToNavigation(vc: detailsMovie)
+       }
     
     //MARK:- Helper methods
     func addViewControllerToNavigation(vc : UIViewController) {
-        navigationController.addChild(vc)
+        navigationController.present(vc, animated: true, completion: nil)
     }
     
     func instantiateInitialVCFromStoryboard(storyboardName : String) -> UIViewController {

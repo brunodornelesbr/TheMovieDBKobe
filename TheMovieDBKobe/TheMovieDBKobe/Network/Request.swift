@@ -24,4 +24,32 @@ class Request {
             }
         }
     }
+    
+    func searchForMovie(query : String,page : Int = 1, completionHandler : @escaping (UpcomingMoviesRequestObject?,Error?)->()) {
+        let url = APIConstants.searchMovie
+        let params : Parameters = ["page":page,"api_key":APIConstants.apikey,"query" : query]
+       
+        Alamofire.request(url, method: .get, parameters: params, headers:nil).validate().responseObject{ (response:DataResponse<UpcomingMoviesRequestObject>) in
+                   switch response.result {
+                   case .success(let upcomingObject): completionHandler(upcomingObject,nil)
+                       return
+                   case .failure(let error):
+                       completionHandler(nil,error)
+                   }
+       }
+    }
+    
+    func getGenres(completionHandler : @escaping (Bool?,Error?)->()) {
+        let url = APIConstants.genreList
+        let params : Parameters = ["api_key":APIConstants.apikey]
+        
+        Alamofire.request(url, method: .get, parameters: params, headers:nil).validate().responseObject{ (response:DataResponse<Genres>) in
+                          switch response.result {
+                          case .success(let genresList): completionHandler(true,nil)
+                              return
+                          case .failure(let error):
+                              completionHandler(false,error)
+                          }
+              }
+    }
 }
