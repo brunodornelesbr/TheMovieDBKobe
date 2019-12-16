@@ -5,7 +5,9 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - Nimble (8.0.4)
   - ObjectMapper (3.5.1)
+  - Quick (2.2.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -17,6 +19,8 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - AlamofireObjectMapper
+  - Nimble
+  - Quick
   - RxCocoa
   - RxSwift
 
@@ -25,7 +29,9 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - AlamofireObjectMapper
+    - Nimble
     - ObjectMapper
+    - Quick
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -34,11 +40,13 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: 1502d181d59f3fa09e8ce3e74f3b8731601f10ba
+PODFILE CHECKSUM: 1adabf701c535ccbdd026576ba9b01d35eb1cdb7
 
 COCOAPODS: 1.8.4
