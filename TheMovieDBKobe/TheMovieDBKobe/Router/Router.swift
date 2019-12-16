@@ -22,13 +22,14 @@ class Router {
         addViewControllerToNavigation(vc: upcomingMovie)
     }
     func routeToDetailsMovie(movie : Movie) {
-//           let detailsMovie = instantiateInitialVCFromStoryboard(storyboardName: "DetailsMovie")
-//           addViewControllerToNavigation(vc: detailsMovie)
+           let detailsMovie = instantiateInitialVCFromStoryboard(storyboardName: "DetailsMovie") as! DetailsMovieViewController
+            detailsMovie.model = DetailMovieViewModel(movie: movie)
+           addViewControllerToNavigation(vc: detailsMovie)
        }
     
     //MARK:- Helper methods
     func addViewControllerToNavigation(vc : UIViewController) {
-        navigationController.present(vc, animated: true, completion: nil)
+        navigationController.pushViewController(vc, animated: true) 
     }
     
     func instantiateInitialVCFromStoryboard(storyboardName : String) -> UIViewController {
