@@ -30,7 +30,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX3-vh-VPb">
-                                <rect key="frame" x="15" y="186.5" width="133.5" height="32.5"/>
+                                <rect key="frame" x="15" y="186.5" width="399" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -78,6 +78,7 @@
                             <constraint firstItem="07c-YF-KJv" firstAttribute="leading" secondItem="hcQ-Di-T48" secondAttribute="leading" constant="10" id="PMY-i5-4tf"/>
                             <constraint firstItem="tSv-PD-Vsf" firstAttribute="top" secondItem="hQN-8e-nXK" secondAttribute="top" id="Qxw-Th-DyW"/>
                             <constraint firstItem="hQN-8e-nXK" firstAttribute="leading" secondItem="hcQ-Di-T48" secondAttribute="leading" id="VAO-wT-jzf"/>
+                            <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="IX3-vh-VPb" secondAttribute="trailing" id="Vlk-qc-AYW"/>
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="hQN-8e-nXK" secondAttribute="trailing" id="WTP-Cg-apu"/>
                             <constraint firstItem="IX3-vh-VPb" firstAttribute="leading" secondItem="tSv-PD-Vsf" secondAttribute="leading" constant="15" id="YGm-y8-nG1"/>
                             <constraint firstItem="tSv-PD-Vsf" firstAttribute="bottom" secondItem="hQN-8e-nXK" secondAttribute="bottom" id="bRK-yj-p8U"/>

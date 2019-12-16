@@ -78,7 +78,6 @@ class UpcomingMoviesViewController: UIViewController {
             }).disposed(by: bag)
     }
     
-    
     func searchFor(text: String){
          model.searchMovies(searchText: text)
      }
